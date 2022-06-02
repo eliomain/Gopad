@@ -1,0 +1,11 @@
+{{if .src}}
+<script type='text/javascript'>
+    window.alert('{{.mess}}');
+    window.location.href='{{.src}}';
+</script>
+{{else}}
+<script type='text/javascript'>
+    window.alert('{{.mess}}');
+    window.history.go(-1);
+</script>
+{{end}}

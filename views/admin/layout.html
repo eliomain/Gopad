@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>GoPad Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="/static/admin/admin.css" />
+    <link rel="stylesheet" href="/static/admin/fonts.css" />
+</head>
+<script type="text/javascript" laguage="javascript">
+    var navSelectNo = {{if .navSelect}}{{.navSelect}}{{else}}0{{end}}
+</script>
+<body>
+
+
+<div class="head">
+    <div class="pubw">
+        <div class="a">GoPad Dashboard Version1.0</div>
+        <div class="b">
+            <div class="ba">您好，ROOT</div>
+            <div class="bb"><a href="/admin/logout"><div class="fonts1" aria-hidden="true" data-icon="&#x3d;" title="安全退出"></div></a></div>
+        </div>
+    </div>
+</div>
+
+<div class="main pubw">
+    <div class="left">
+        <ul id="ula">
+            <li><a id="first" href="/admin/index">控制台</a></li>
+            <li><a><span class="icon_house_alt fonts2" aria-hidden="true"></span>基本</a>
+                <ul id="ulb" style=" display:none;">
+                    <li><a href="/admin/set">基本设置</a></li>
+                </ul>
+            </li>
+
+            <li><a><span class="icon_document_alt fonts2" aria-hidden="true"></span>文章</a>
+                <ul id="ulb" style=" display:none;">
+                    <li><a href="/admin/postall">文章列表</a></li>
+                    <li><a href="/admin/postadd">写文章</a></li>
+                    <li><a href="/admin/postcate">分类目录</a></li></ul>
+            </li>
+
+<!--            <li><a><span class="icon_menu-square_alt fonts2" aria-hidden="true"></span>菜单</a>-->
+<!--                <ul id="ulb" style=" display:none;">-->
+<!--                    <li><a href="menuliurl">菜单列表</a></li>-->
+<!--                    <li><a href="menuaddurl">添加菜单</a></li>-->
+<!--                    <li><a href="menucateurl">菜单分类</a></li></ul>-->
+<!--            </li>-->
+
+            <li><a><span class="icon_group fonts2" aria-hidden="true"></span>用户</a>
+                <ul id="ulb" style=" display:none;">
+                    <li><a href="/admin/userli">用户列表</a></li>
+                    <li><a href="/admin/useradd">添加用户</a></li></ul>
+            </li>
+
+        </ul>
+    </div>
+    <div class="right">
+        <div class="nav">
+            <ul>
+                <li><a href="{$dashboardurl}">Dashboard</a></li>
+                <li>&gt;&nbsp;<a href="javascript:void(0)">{{if .controllerName}}{{.controllerName}}{{end}}</a></li>
+<!--                {if $postcatenow}-->
+<!--                {{/*文章->所有文章->特定分类nav*/}}-->
+<!--                <li>&gt;&nbsp;<a title="分类ID:{$postcatenow.id}" href="{$postallurl}?pid={$postcatenow.id}">{$postcatenow.name}</a></li>-->
+<!--                {/if}-->
+            </ul>
+        </div>
+
+        {{.LayoutContent}}
+
+
+    </div>
+    <div class="clear"></div>
+</div>
+
+</body>
+{{template "admin/footer.html" .}}

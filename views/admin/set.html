@@ -1,0 +1,121 @@
+
+<div class="content">
+	<div>
+
+<form method="post">
+<table class="form-table">
+<tbody><tr>
+<th scope="row"><label for="webtitle">站点标题（Title）</label></th>
+<td><input type="text" class="regular-text" value="{{index .options 0 | showoptions }}" id="webtitle" name="webtitle"></td>
+</tr>
+
+<tr>
+<th scope="row"><label>站点关键字（Keywords）</label></th>
+<td>
+<textarea rows='5' cols='39' name='keywords'>{{index .options 3 | showoptions }}</textarea>
+</td>
+</tr>
+
+
+<tr>
+<th scope="row"><label>站点描述（Description）</label></th>
+<td>
+<textarea rows='5' cols='39' name='description'>{{index .options 4 | showoptions }}</textarea>
+</td>
+</tr>
+
+<tr>
+	<th scope="row"><label for="siteurl">网站地址（URL）</label></th>
+	<td><input type="url" class="regular-text code" value="{{index .options 2 | showoptions }}" id="siteurl" name="siteurl"></td>
+</tr>
+
+
+<tr>
+<th scope="row"><label for="admin_email">电子邮件地址 </label></th>
+<td><input type="email" class="regular-text ltr" value="{{index .options 5 | showoptions }}" aria-describedby="admin-email-description" id="admin_email" name="admin_email">
+</td>
+</tr>
+
+
+
+	<tr>
+		<th width="33%" scope="row"><label for="LANG">站点语言</label></th>
+		<td>
+			<select id="LANG" name="LANG"><optgroup label="已安装">
+<option data-installed="1" selected="selected">简体中文</option>
+</optgroup>
+<optgroup label="暂未开发">
+<option lang="ar" value="ar">العربية</option>
+<option lang="az" value="az">Azərbaycan dili</option>
+<option lang="bg" value="bg_BG">Български</option>
+<option lang="bn" value="bn_BD">বাংলা</option>
+<option lang="bs" value="bs_BA">Bosanski</option>
+<option lang="ca" value="ca">Català</option>
+<option lang="cy" value="cy">Cymraeg</option>
+<option lang="da" value="da_DK">Dansk</option>
+<option lang="de" value="de_DE_formal">Deutsch (Sie)</option>
+<option lang="de" value="de_CH">Deutsch (Schweiz)</option>
+<option lang="de" value="de_DE">Deutsch</option>
+<option lang="el" value="el">Ελληνικά</option>
+<option lang="en" value="en_CA">English (Canada)</option>
+<option lang="en" value="en_AU">English (Australia)</option>
+<option lang="en" value="en_NZ">English (New Zealand)</option>
+<option lang="en" value="en_GB">English (UK)</option>
+<option lang="eo" value="eo">Esperanto</option>
+<option lang="es" value="es_MX">Español de México</option>
+<option lang="es" value="es_CL">Español de Chile</option>
+<option lang="es" value="es_PE">Español de Perú</option>
+<option lang="es" value="es_ES">Español</option>
+<option lang="es" value="es_CO">Español de Colombia</option>
+<option lang="et" value="et">Eesti</option>
+<option lang="eu" value="eu">Euskara</option>
+<option lang="fa" value="fa_IR">فارسی</option>
+<option lang="fi" value="fi">Suomi</option>
+<option lang="fr" value="fr_FR">Français</option>
+<option lang="gd" value="gd">Gàidhlig</option>
+<option lang="gl" value="gl_ES">Galego</option>
+<option lang="haz" value="haz">هزاره گی</option>
+<option lang="he" value="he_IL">עִבְרִית</option>
+<option lang="hr" value="hr">Hrvatski</option>
+<option lang="hu" value="hu_HU">Magyar</option>
+<option lang="hy" value="hy">Հայերեն</option>
+<option lang="id" value="id_ID">Bahasa Indonesia</option>
+<option lang="is" value="is_IS">Íslenska</option>
+<option lang="it" value="it_IT">Italiano</option>
+<option lang="ja" value="ja">日本語</option>
+<option lang="ko" value="ko_KR">한국어</option>
+<option lang="lt" value="lt_LT">Lietuvių kalba</option>
+<option lang="nb" value="nb_NO">Norsk bokmål</option>
+<option lang="nl" value="nl_NL">Nederlands</option>
+<option lang="nn" value="nn_NO">Norsk nynorsk</option>
+<option lang="oc" value="oci">Occitan</option>
+<option lang="pl" value="pl_PL">Polski</option>
+<option lang="ps" value="ps">پښتو</option>
+<option lang="pt" value="pt_PT">Português</option>
+<option lang="pt" value="pt_BR">Português do Brasil</option>
+<option lang="ro" value="ro_RO">Română</option>
+<option lang="ru" value="ru_RU">Русский</option>
+<option lang="sk" value="sk_SK">Slovenčina</option>
+<option lang="sl" value="sl_SI">Slovenščina</option>
+<option lang="sq" value="sq">Shqip</option>
+<option lang="sr" value="sr_RS">Српски језик</option>
+<option lang="sv" value="sv_SE">Svenska</option>
+<option lang="th" value="th">ไทย</option>
+<option lang="tl" value="tl">Tagalog</option>
+<option lang="tr" value="tr_TR">Türkçe</option>
+<option lang="ug" value="ug_CN">Uyƣurqə</option>
+<option lang="uk" value="uk">Українська</option>
+<option lang="zh" value="zh_TW">繁體中文</option>
+<option lang="zh" value="zh_CN">简体中文</option>
+<option lang="en" value="en_US">English</option>
+
+</optgroup></select>		</td>
+	</tr>
+	</tbody></table>
+
+<p class="submit">
+<input type="submit" value="保存更改" class="button button-primary" id="submit" name="submit">
+</p></form>
+	
+	</div>
+	</div>
